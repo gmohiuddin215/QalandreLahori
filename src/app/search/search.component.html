@@ -1,0 +1,64 @@
+<app-navbar></app-navbar>
+<!-- About Section -->
+<section [hidden]="poemhide" class="page-section text-dark mb-0">
+  <div class="container">
+
+    <!-- About Section Heading -->
+    <h1 class="page-section-mainheading text-center text-uppercase">تلاش کریں</h1>
+
+    <!-- Icon Divider -->
+    <div class="divider-custom text-dark">
+      <div class="divider-custom-line"></div>
+      <div class="divider-custom-icon">
+        <i class="fas fa-star"></i>
+      </div>
+      <div class="divider-custom-line"></div>
+    </div>
+
+    <!-- About Section Content -->
+    <div>
+      <form class="form-group" id="contactForm">
+        <div class="control-group">
+            <div class="form-group floating-label-form-group controls mb-0 pb-2">
+              <input class="form-control" type="text" placeholder="لفظ لکھیں۔۔۔" (input)="updatesearchText($event)">
+              <p class="help-block text-danger"></p>
+            </div>
+        </div>
+      </form>
+      <br>
+      <div class="mt-2" *ngFor="let poem of Poems">
+            <ul class="text-right">
+                <a *ngIf="poem.data.includes(searchText) && searchText != 0" (click)="readPoem(poem._id)"><li>{{poem.title}}</li></a>
+            </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+<section [hidden]="!poemhide" class="page-section portfolio" id="bookshelf">
+  <div class="container">
+
+    <!-- Booksshelf Section Heading -->
+    <h1 class="page-section-mainheading text-center text-uppercase text-secondary mb-0">کلام</h1>
+
+    <!-- Icon Divider -->
+    <div class="divider-custom">
+      <div class="divider-custom-line"></div>
+      <div class="divider-custom-icon">
+        <i class="fas fa-star"></i>
+      </div>
+      <div class="divider-custom-line"></div>
+    </div>
+    <div class="container">
+    <div *ngFor="let poem of Poems" >
+        <h2 class="pre-heading" *ngIf="poem._id==poemid">{{poem.title}}</h2>
+        <pre class="text-right mt-2 mb-5" *ngIf="poem._id==poemid" [innerHTML]="poem.data | highlight: searchText">{{poem.data}}</pre>
+    </div>
+    <div>
+        <button class="btn btn-primary btn-xl"  (click)="goBack()">واپس جائیں</button>
+    </div>
+    </div>
+
+  </div>
+</section>
+<app-footer></app-footer>

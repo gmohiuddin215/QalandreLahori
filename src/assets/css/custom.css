@@ -1,0 +1,127 @@
+@font-face {
+    font-family: MNW;
+    src: url(../fonts/MNW.ttf);
+}
+
+body, .read, #mainNav, .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6, pre{
+    direction: rtl;
+    font-family: MNW;
+    font-size: 2.5rem;
+    text-align: center;
+    font-weight: normal;
+    word-spacing: 2px;
+}
+
+header {
+    background-image: url(../img/books.jpg);
+    background-repeat:no-repeat;
+    background-size:cover;
+}
+
+.form-group ::placeholder{
+    color: black;
+    text-align: right;
+}
+
+a {
+    cursor: pointer;
+}
+a > li{
+    color: #6f42c1;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.page-section-mainheading{
+    font-size: 4rem;
+}
+
+.pre-heading {
+    font-size: 3rem;
+}
+
+span {
+    color: #6f42c1;
+    font-size: 4rem;
+}
+
+.masthead .masthead-heading, .masthead .masthead-subheading{
+    text-shadow: 1px 2px 2px black;
+}
+
+.ts{
+    text-shadow: 1px 2px 2px black;
+}
+
+.portfolio .portfolio-item .portfolio-item-caption{
+    background-color: rgba(111,66,193,.9);
+}
+
+#contactlink{
+    color: white;
+    text-decoration: none;
+}
+
+#contactlink:hover{
+    color: lightgray;
+}
+
+pre {
+    overflow: hidden;
+    padding-right: 1rem;
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
+}
+
+.btn-xl{
+    margin: .5rem;
+}
+
+.floating-label-form-group input, .floating-label-form-group textarea{
+    text-align: center;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .pre-heading {
+        font-size: 2rem;
+    }
+    .navbar-brand{
+        font-size: 2rem;
+    }
+    .page-section-mainheading{
+        font-size: 3rem;
+    }
+    body, .read, #mainNav, .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6, pre{
+        font-size: 1.5rem;
+    }
+    .floating-label-form-group input, .floating-label-form-group textarea{
+        padding-top: 1rem;
+        font-size: 1.5rem;
+    }
+    span {
+        font-size: 3rem;
+    }
+  }
+
+.lead {
+    text-align: right;
+}
+
+#mainNav .navbar-toggler{
+    font-size: 1.5rem;
+    padding: 0.8rem 1.3rem;
+    font-weight: normal;
+}
+.navbar-brand{
+    font-size: 2.5rem;
+}
+
+.footer{
+    background-color: #6f42c1;
+}

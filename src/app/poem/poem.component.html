@@ -1,0 +1,29 @@
+<app-navbar></app-navbar>
+<!-- Bookshelf Section -->
+<section class="page-section portfolio" id="bookshelf">
+  <div class="container">
+
+    <!-- Booksshelf Section Heading -->
+    <h1 class="page-section-mainheading text-center text-uppercase text-secondary mb-0">کلام</h1>
+
+    <!-- Icon Divider -->
+    <div class="divider-custom">
+      <div class="divider-custom-line"></div>
+      <div class="divider-custom-icon">
+        <i class="fas fa-star"></i>
+      </div>
+      <div class="divider-custom-line"></div>
+    </div>
+    <div class="container">
+    <div *ngFor="let poem of Poems">
+        <h2 class="pre-heading" *ngIf="poem._id==poemid">{{poem.title}}</h2>
+        <pre class="text-right mt-2 mb-5" *ngIf="poem._id==poemid">{{poem.data}}</pre>
+    </div>
+    <div>
+        <button class="btn btn-primary btn-xl" (click)="goBack()">واپس جائیں</button>
+    </div>
+    </div>
+
+  </div>
+</section>
+<app-footer></app-footer>

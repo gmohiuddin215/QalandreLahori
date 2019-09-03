@@ -1,0 +1,29 @@
+<app-navbar></app-navbar>
+<!-- Bookshelf Section -->
+<section class="page-section portfolio" id="bookshelf">
+  <div class="container">
+
+    <!-- Booksshelf Section Heading -->
+    <h1 class="page-section-mainheading text-center text-uppercase text-secondary mb-0">فہرست</h1>
+
+    <!-- Icon Divider -->
+    <div class="divider-custom">
+      <div class="divider-custom-line"></div>
+      <div class="divider-custom-icon">
+        <i class="fas fa-star"></i>
+      </div>
+      <div class="divider-custom-line"></div>
+    </div>
+  
+    <div *ngFor="let poem of Poems">
+        <ul class="text-right">
+            <a [routerLink]="['/poems', poem._id]"><li *ngIf="poem.book_id==bookid">{{poem.title}}</li></a>
+        </ul>
+    </div>
+    <div>
+        <button class="btn btn-primary btn-xl" (click)="goBack()">واپس جائیں</button>
+    </div>
+
+  </div>
+</section>
+<app-footer></app-footer>
